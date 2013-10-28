@@ -36,6 +36,24 @@
     int p = [period integerForKey:@"my_period"];
     NSLog(@"体重は%d",w);
     NSLog(@"期間は%d",p);
-    
+    int k = [self kiso:(int)w];
+    NSLog(@"基礎代謝は%d",k);
+    int s = [self syouhi:(int)k];
+    NSLog(@"消費カロリーは%d",s);
 }
+
+-(int)kiso:(int)w{
+    //18~29の女性として計算
+    w = w*23.5;
+    NSLog(@"基礎呼ばれたよ");
+    return w;
+}
+
+- (int)syouhi:(int)k{
+    //運動強度低い
+    k = k*1.3;
+    NSLog(@"消費呼ばれたよ");
+    return k;
+}
+
 @end

@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *save;
 
 - (IBAction)save:(id)sender;
+- (int)kiso:(int)w;
+- (int)syouhi:(int)k;
 @end
