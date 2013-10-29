@@ -14,7 +14,6 @@
 
 @implementation ViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,6 +39,7 @@
     NSLog(@"基礎代謝は%d",k);
     int s = [self syouhi:(int)k];
     NSLog(@"消費カロリーは%d",s);
+    [self check:(int)w int:(int)p];
 }
 
 -(int)kiso:(int)w{
@@ -55,5 +55,20 @@
     NSLog(@"消費呼ばれたよ");
     return k;
 }
+
+- (void)check:(int)check_w int:(int)check_p{
+    check_w = check_w/check_p;
+    NSLog(@"ほげほげ%d",check_w);
+    BOOL check_goal;
+    if(check_w>5){
+        NSLog(@"目標の見直しが必要です");
+        check_goal = NO;
+    }else{
+        NSLog(@"適切な目標です");
+        check_goal = YES;
+    }
+    
+}
+
 
 @end

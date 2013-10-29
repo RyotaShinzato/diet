@@ -16,4 +16,5 @@
 - (IBAction)save:(id)sender;
 - (int)kiso:(int)w;
 - (int)syouhi:(int)k;
+- (void)check:(int)check_w int:(int)check_p;
 @end
